@@ -61,7 +61,8 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+    // 'home' => RouteServiceProvider::HOME,
+    'home' => config('app.spa_url') . '/dashboard',
 
     /*
     |--------------------------------------------------------------------------
@@ -118,7 +119,7 @@ return [
     |
     */
 
-    'views' => true,
+    'views' => false,
 
     /*
     |--------------------------------------------------------------------------
