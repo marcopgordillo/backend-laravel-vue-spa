@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 
 class TokenController extends Controller
@@ -27,6 +28,6 @@ class TokenController extends Controller
 
         $token = $user->createToken($request->device_name)->plainTextToken;
 
-        return response()->json(['token' => $token], 200);
+        return response()->json(['token' => $token], Response::HTTP_OK);
     }
 }
